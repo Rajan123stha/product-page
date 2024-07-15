@@ -1,0 +1,984 @@
+Header
+import React from "react";
+import Logo from "../assets/Company_logo.png";
+import Profile from "../assets/profile.jpg";
+import { FaUser, FaWhatsapp, FaViber, FaUserCircle } from "react-icons/fa";
+import { DiResponsive } from "react-icons/di";
+
+function Header() {
+  return (
+    <header>
+      {/* Top Announcement Bar */}
+      <div className="bg-blue-500 text-yellow-400 text-center py-3 text-lg font-semibold underline-offset-4">
+        <a href="https://www.discoveryworldtrekking.com/blog/nepal-trek-booking-open">
+          Nepal Trek Booking Open For 2024/25 (Note: From September, The Lukla
+          Flights Will Be From Ramechhap)
+        </a>
+      </div>
+
+      {/* Main Header */}
+      <div className="bg-white py-6 border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center space-x-6 mb-4 md:mb-0">
+            <img
+              src={Logo}
+              alt="Discovery World Trekking Logo"
+              className="h-16"
+            />
+          </div>
+
+          {/* Contact Information */}
+          <div className="hidden md:flex items-center space-x-10">
+            <div className="text-center">
+              <p className="text-gray-700 text-lg">Quick Questions? Email Us</p>
+              <p className="font-semibold text-lg">
+                info@discoveryworldtrekking.com
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="text-gray-700 text-lg">
+                Talk to a Travel Expert (Paul)
+              </p>
+              <p className="font-semibold text-lg flex items-center">
+                <FaWhatsapp size={25} color="green" className="mr-2" />
+                <FaViber size={22} color="purple" className="mr-2" />
+                +9779840055491
+              </p>
+            </div>
+          </div>
+
+          {/* Login Button */}
+          <div className="flex items-center space-x-3">
+            <img
+              src={Profile}
+              alt="Profile"
+              className="h-12 w-12 rounded-full"
+            />
+            <button className="flex items-center border border-gray-300 px-4 py-2 md:px-6 md:py-3 rounded-2xl hover:bg-gray-100 text-lg">
+              <FaUserCircle className="mr-2" size={25} color="blue" />
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Bar */}
+      <nav className="bg-gray-800 text-white py-3">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center">
+          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 lg:space-x-8 text-lg font-bold">
+            <li>
+              <a href="#nepal-tours" className="hover:text-gray-300">
+                NEPAL TOURS AND TRIPS
+              </a>
+            </li>
+            <li>
+              <a href="#day-tours" className="hover:text-gray-300">
+                DAY TOURS
+              </a>
+            </li>
+            <li>
+              <a href="#best-deals" className="hover:text-gray-300">
+                BEST DEALS
+              </a>
+            </li>
+            <li>
+              <a href="#travel-info" className="hover:text-gray-300">
+                TRAVEL INFO
+              </a>
+            </li>
+            <li>
+              <a href="#about-us" className="hover:text-gray-300">
+                ABOUT US
+              </a>
+            </li>
+            <li>
+              <a href="#blog" className="hover:text-gray-300">
+                BLOG
+              </a>
+            </li>
+            <li>
+              <a href="#reviews" className="hover:text-gray-300">
+                REVIEWS
+              </a>
+            </li>
+            <li>
+              <a href="#contact-us" className="hover:text-gray-300">
+                CONTACT US
+              </a>
+            </li>
+          </ul>
+          <div className="mt-4 md:mt-0">
+            <button className="hover:text-gray-300">
+              <svg
+                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5A7 7 0 115 9a7 7 0 0112 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;
+
+DiResponsive
+import React from "react";
+import Logo from "../assets/Company_logo.png";
+import Profile from "../assets/profile.jpg";
+import { FaUserCircle, FaWhatsapp, FaViber, FaEnvelope } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import TrekInfo from "./TrekInfo";
+
+function Header() {
+  return (
+    <header>
+      {/* Top Announcement Bar */}
+      <div className="bg-blue-500 text-yellow-400 text-center py-3 text-lg font-semibold underline-offset-4">
+        <a href="https://www.discoveryworldtrekking.com/blog/nepal-trek-booking-open">
+          Nepal Trek Booking Open For 2024/25 (Note: From September, The Lukla
+          Flights Will Be From Ramechhap)
+        </a>
+      </div>
+
+      {/* Main Header */}
+      <div className="bg-white py-6 border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center space-x-6">
+            <img
+              src={Logo}
+              alt="Discovery World Trekking Logo"
+              className="h-16"
+            />
+          </div>
+
+          {/* Contact Information (hidden on small screens) */}
+          <div className="hidden md:flex items-center space-x-10">
+            <div className="text-center">
+              <p className="text-gray-700 text-lg">Quick Questions? Email Us</p>
+              <p className="font-semibold text-lg">
+                info@discoveryworldtrekking.com
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="text-gray-700 text-lg">
+                Talk to a Travel Expert (Paul)
+              </p>
+              <p className="font-semibold text-lg flex items-center">
+                <FaWhatsapp size={25} color="green" className="mr-2" />
+                <FaViber size={22} color="purple" className="mr-2" />
+                +9779840055491
+              </p>
+            </div>
+          </div>
+
+          {/* Login Button and Contact Icons (visible on small screens) */}
+          <div className="flex md:hidden items-center space-x-3">
+            <FaWhatsapp size={22} color="green" />
+            <FaViber size={22} color="purple" />
+            <FaEnvelope size={22} color="gray" />
+            <button className="flex items-center border border-gray-300 p-2 rounded-full hover:bg-gray-100">
+              <FaUserCircle size={25} color="blue" />
+            </button>
+          </div>
+
+          {/* Profile and Login Button (visible on large screens) */}
+          <div className="hidden md:flex items-center space-x-3">
+            <img
+              src={Profile}
+              alt="Profile"
+              className="h-12 w-12 rounded-full"
+            />
+            <button className="flex items-center border border-gray-300 px-4 py-2 md:px-6 md:py-3 rounded-2xl hover:bg-gray-100 text-lg">
+              <FaUserCircle className="mr-2" size={25} color="blue" />
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Bar */}
+      <nav className="bg-gray-800 text-white py-3">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center">
+          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 lg:space-x-8 text-lg font-bold">
+            <li>
+              <a href="#nepal-tours" className="hover:text-gray-300">
+                NEPAL TOURS AND TRIPS
+              </a>
+            </li>
+            <li>
+              <a href="#day-tours" className="hover:text-gray-300">
+                DAY TOURS
+              </a>
+            </li>
+            <li>
+              <a href="#best-deals" className="hover:text-gray-300">
+                BEST DEALS
+              </a>
+            </li>
+            <li>
+              <a href="#travel-info" className="hover:text-gray-300">
+                TRAVEL INFO
+              </a>
+            </li>
+            <li>
+              <a href="#about-us" className="hover:text-gray-300">
+                ABOUT US
+              </a>
+            </li>
+            <li>
+              <a href="#blog" className="hover:text-gray-300">
+                BLOG
+              </a>
+            </li>
+            <li>
+              <a href="#reviews" className="hover:text-gray-300">
+                REVIEWS
+              </a>
+            </li>
+            <li>
+              <a href="#contact-us" className="hover:text-gray-300">
+                CONTACT US
+              </a>
+            </li>
+          </ul>
+          <div className="mt-4 md:mt-0">
+            <button className="hover:text-gray-300">
+              <CiSearch size={30} />
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;
+
+
+TrekInfo
+
+import React, { useEffect, useState } from "react";
+import {
+  FaMapMarkerAlt,
+  FaHiking,
+  FaMountain,
+  FaRulerCombined,
+  FaCalendarAlt,
+  FaUsers,
+  FaBed,
+  FaUtensils,
+  FaPlane,
+  FaFacebook,
+  FaEnvelope,
+  FaTimes,
+  FaLink,
+} from "react-icons/fa";
+
+function TrekInfo() {
+  const [heroHeight, setHeroHeight] = useState(0);
+
+  useEffect(() => {
+    const heroSection = document.querySelector(".hero-section");
+    if (heroSection) {
+      setHeroHeight(heroSection.offsetHeight);
+    }
+
+    const handleResize = () => {
+      if (heroSection) {
+        setHeroHeight(heroSection.offsetHeight);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <div
+      className="container mx-auto px-4 py-6 relative"
+      style={{ marginTop: heroHeight }}
+    >
+      {/* Share Section */}
+      <div className="flex flex-col items-center mb-6">
+        <span className="text-gray-700 text-lg mb-2">
+          Share with your Friends
+        </span>
+        <div className="flex space-x-4">
+          <FaFacebook size={32} color="#0077b5" />
+          <FaEnvelope size={32} color="#0077b5" />
+          <FaTimes size={32} color="#0077b5" />
+          <FaLink size={32} color="#0077b5" />
+        </div>
+      </div>
+
+      {/* Trek Information */}
+      <div className="flex">
+        <div className="w-3/4">
+          <div className="grid grid-cols-3 gap-6 text-xl">
+            {/* ... (remaining trek info icons and text) ... */}
+            <div className="flex items-center space-x-2">
+              <FaMapMarkerAlt size={32} />
+              <div>
+                <p className="text-gray-700">Destination</p>
+                <p className="font-semibold">Nepal</p>
+              </div>
+            </div>
+            {/* (rest of the info) */}
+            <div className="flex items-center space-x-2">
+              <FaHiking size={32} />
+              <div>
+                <p className="text-gray-700">Activity</p>
+                <p className="font-semibold">Everest Treks</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaMountain size={32} />
+              <div>
+                <p className="text-gray-700">Region</p>
+                <p className="font-semibold">Everest Region</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaRulerCombined size={32} />
+              <div>
+                <p className="text-gray-700">Distance</p>
+                <p className="font-semibold">Lukla-EBC-Lukla(130km/80miles)</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaCalendarAlt size={32} />
+              <div>
+                <p className="text-gray-700">Duration</p>
+                <p className="font-semibold">14 Days</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaMountain size={32} />
+              <div>
+                <p className="text-gray-700">Max. Altitude</p>
+                <p className="font-semibold">5,555m at Kalapathar</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaUsers size={32} />
+              <div>
+                <p className="text-gray-700">Group Size</p>
+                <p className="font-semibold">2-30</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaBed size={32} />
+              <div>
+                <p className="text-gray-700">Nature Of Trek</p>
+                <p className="font-semibold">Lodge to Lodge Trekking</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaCalendarAlt size={32} />
+              <div>
+                <p className="text-gray-700">Best Season</p>
+                <p className="font-semibold">
+                  Feb, Mar, Apr, May, June, Sep, Oct, Nov & Dec
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaUtensils size={32} />
+              <div>
+                <p className="text-gray-700">Meals Included</p>
+                <p className="font-semibold">
+                  All Meals (Breakfast, Lunch & Dinner) during the trek
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaPlane size={32} />
+              <div>
+                <p className="text-gray-700">Start / End Point</p>
+                <p className="font-semibold">Kathmandu / Kathmandu</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaPlane size={32} />
+              <div>
+                <p className="text-gray-700">Transportation</p>
+                <p className="font-semibold">Domestic flight (KTM-Lukla-KTM)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Fixed Position Box on the Right */}
+        <div
+          className="fixed-box"
+          style={{ top: `calc(${heroHeight}px + 2rem)` }}
+        >
+          <div className="w-1/4 border border-black rounded-lg h-96"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default TrekInfo;
+
+//this is the code i need if my idea doesnt work
+
+import React, { useState, useEffect } from "react";
+import {
+  FaMapMarkerAlt,
+  FaHiking,
+  FaMountain,
+  FaRulerCombined,
+  FaCalendarAlt,
+  FaUsers,
+  FaBed,
+  FaUtensils,
+  FaPlane,
+  FaFacebook,
+  FaEnvelope,
+  FaTimes,
+  FaLink,
+} from "react-icons/fa";
+
+function TrekInfo() {
+  const [showFloatingBox, setShowFloatingBox] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const trekInfoSection = document.querySelector(".trek-info-section");
+      const trekInfoTop = trekInfoSection.getBoundingClientRect().top;
+
+      // Show floating box if the trek info section is scrolled into view and window width is larger than 768px
+      if (trekInfoTop <= 0 && window.innerWidth >= 768) {
+        setShowFloatingBox(true);
+      } else {
+        setShowFloatingBox(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll); // Adjust on window resize
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className="container mx-auto px-4 py-6 relative trek-info-section">
+      {/* Share Section */}
+      <div className="flex flex-col items-center mb-6">
+        <span className="text-gray-700 text-lg mb-2">
+          Share with your Friends
+        </span>
+        <div className="flex space-x-4">
+          <FaFacebook size={32} color="#0077b5" />
+          <FaEnvelope size={32} color="#0077b5" />
+          <FaTimes size={32} color="#0077b5" />
+          <FaLink size={32} color="#0077b5" />
+        </div>
+      </div>
+
+      {/* Trek Information */}
+      <div className="flex flex-wrap">
+        <div className="w-full lg:w-3/4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xl">
+            <div className="flex items-center space-x-2">
+              <FaMapMarkerAlt size={32} />
+              <div>
+                <p className="text-gray-700">Destination</p>
+                <p className="font-semibold">Nepal</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaHiking size={32} />
+              <div>
+                <p className="text-gray-700">Activity</p>
+                <p className="font-semibold">Everest Treks</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaMountain size={32} />
+              <div>
+                <p className="text-gray-700">Region</p>
+                <p className="font-semibold">Everest Region</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaRulerCombined size={32} />
+              <div>
+                <p className="text-gray-700">Distance</p>
+                <p className="font-semibold">Lukla-EBC-Lukla(130km/80miles)</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaCalendarAlt size={32} />
+              <div>
+                <p className="text-gray-700">Duration</p>
+                <p className="font-semibold">14 Days</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaMountain size={32} />
+              <div>
+                <p className="text-gray-700">Max. Altitude</p>
+                <p className="font-semibold">5,555m at Kalapathar</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaUsers size={32} />
+              <div>
+                <p className="text-gray-700">Group Size</p>
+                <p className="font-semibold">2-30</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaBed size={32} />
+              <div>
+                <p className="text-gray-700">Nature Of Trek</p>
+                <p className="font-semibold">Lodge to Lodge Trekking</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaCalendarAlt size={32} />
+              <div>
+                <p className="text-gray-700">Best Season</p>
+                <p className="font-semibold">
+                  Feb, Mar, Apr, May, June, Sep, Oct, Nov & Dec
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaUtensils size={32} />
+              <div>
+                <p className="text-gray-700">Meals Included</p>
+                <p className="font-semibold">
+                  All Meals (Breakfast, Lunch & Dinner) during the trek
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaPlane size={32} />
+              <div>
+                <p className="text-gray-700">Start / End Point</p>
+                <p className="font-semibold">Kathmandu / Kathmandu</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaPlane size={32} />
+              <div>
+                <p className="text-gray-700">Transportation</p>
+                <p className="font-semibold">Domestic flight (KTM-Lukla-KTM)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Box */}
+        <div
+          className={`w-full lg:w-1/4 mt-8 lg:mt-0 ${
+            showFloatingBox ? "fixed top-32 right-8 lg:w-64" : ""
+          } bg-white border border-gray-200 rounded-lg shadow-lg p-4 lg:block`}
+        >
+          <div className="text-center">
+            <h3 className="text-xl font-bold mb-2">14 Days from US$ 1330 PP</h3>
+            <span className="text-green-500 font-semibold">
+              Save $470 Per Pax
+            </span>
+          </div>
+          <div className="text-center mt-4">
+            <p className="text-sm text-gray-500">Group Discount Available</p>
+            <p className="text-sm text-gray-500">
+              Discounts are solely based on your group size. We do not add
+              anyone to your group.
+            </p>
+            <ul className="mt-2 text-left text-sm">
+              <li>2 Pax: US$ 1330</li>
+              <li>3 Pax: US$ 1300</li>
+              <li>4-6 Pax: US$ 1260</li>
+              <li>7-12 Pax: US$ 1220</li>
+              <li>13-18 Pax: US$ 1180</li>
+              <li>19-24 Pax: US$ 1160</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* New Section */}
+      <div className="mt-8 w-3/4">
+        <h2 className="text-2xl font-bold mb-4">
+          Everest Base Camp Trek Overview
+        </h2>
+        <p>
+          Everest Base Camp Trek is one of the finest treks in the world that
+          centers on the world's highest peak Mt. Everest (29,029 ft/8,848.68m).
+          This trek will provide you with a natural thrill as it takes you
+          through breathtaking high-altitude landscapes, esoteric Buddhist
+          monasteries, traditional Sherpa villages, high-altitude flora and
+          fauna, and snow-capped mountains. Climbing Mount Everest Base Camp is
+          a milestone in mountaineering.
+        </p>
+        <h3 className="text-xl font-bold mt-6 mb-4">EBC Trek Highlights</h3>
+        <ul className="list-disc ml-5">
+          <li>World’s highest airport at Syangboche (3,780m/12,402ft)</li>
+          <li>
+            Chance to explore the culture and lifestyles of the local Sherpa
+            people
+          </li>
+          <li>
+            The magnificent views of the world’s highest peak, 8,848.68m/29,029
+            ft.
+          </li>
+          <li>
+            Views of other peaks such as Mt. Lhotse (8,516m), Cho Oyu (8,201m),
+            and Mt. Makalu (8,463m)
+          </li>
+          <li>Explore Sagarmatha National Park</li>
+          <li>
+            Prayer wheels, colorful flags, Mani stones, high suspension bridges
+          </li>
+          <li>Wide range of flora and fauna</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default TrekInfo;
+
+scrolbar new
+import React, { useEffect, useState, useRef } from "react";
+import "../Styles/Style.css";
+import Overview from "./Sections/Overview";
+import Images from "./Sections/Images";
+import Itinerary from "./Sections/Itinerary";
+
+const sections = [
+  { id: "overview", label: "Overview" },
+  { id: "photos-videos", label: "Photos/Videos" },
+  { id: "itinerary", label: "Itinerary" },
+  { id: "includes", label: "Includes" },
+  { id: "map", label: "Map" },
+  { id: "equipments", label: "Equipments" },
+  { id: "trip-info", label: "Trip Info" },
+  { id: "cost-dates", label: "Cost & Dates" },
+  { id: "reviews", label: "Reviews" },
+  { id: "faqs", label: "FAQs" },
+];
+
+const ScrollNavbar = ({ showNavbar }) => {
+  const [activeSection, setActiveSection] = useState("");
+  const navbarRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (navbarRef.current) {
+      navbarRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (navbarRef.current) {
+      navbarRef.current.scrollBy({ left: 200, behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element && scrollPosition >= element.offsetTop - 50) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  if (!showNavbar) return null;
+
+  return (
+    <div className="scroll-navbar bg-blue-800 text-white py-2 fixed w-full z-10">
+      <div className="container  flex justify-between items-center px-4">
+        <button onClick={scrollLeft} className="text-white">
+          &#8592;
+        </button>
+        <div
+          ref={navbarRef}
+          className="flex space-x-4 overflow-x-auto scrollbar-hide"
+        >
+          {sections.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className={`whitespace-nowrap px-4 py-2 ${
+                activeSection === section.id ? "font-bold" : ""
+              } hover:underline`}
+            >
+              {section.label}
+            </a>
+          ))}
+        </div>
+        <button onClick={scrollRight} className="text-white">
+          &#8594;
+        </button>
+        <a
+          href="#"
+          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-2 hidden sm:inline"
+        >
+          Book The Trip
+        </a>
+      </div>
+    </div>
+  );
+};
+
+const Sections = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const sectionsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowNavbar(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      }
+    );
+
+    if (sectionsRef.current) {
+      observer.observe(sectionsRef.current);
+    }
+
+    return () => {
+      if (sectionsRef.current) {
+        observer.unobserve(sectionsRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={sectionsRef}>
+      <ScrollNavbar showNavbar={showNavbar} />
+      <div id="overview">
+        <Overview />
+      </div>
+      <div id="photos-videos">
+        <Images />
+      </div>
+      <div id="itinerary">
+        <Itinerary />
+      </div>
+      <div id="includes">Includes Content</div>
+      <div id="map">Map Content</div>
+      <div id="equipments">Equipments Content</div>
+      <div id="trip-info">Trip Info Content</div>
+      <div id="cost-dates">Cost & Dates Content</div>
+      <div id="reviews">Reviews Content</div>
+      <div id="faqs">FAQs Content</div>
+    </div>
+  );
+};
+
+export default Sections;
+
+/* styles.css */
+
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    flex: 1;
+  }
+
+  .header-icons {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+/*
+@media (max-width: 767px) {
+  .floating-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .floating-box {
+    position: fixed;
+    top: 8rem; // Adjust according to your design 
+    right: 2rem;
+    width: 16rem;
+  }
+}
+*/
+
+.scroll-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+}
+
+.scroll-navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-navbar li {
+  padding: 15px;
+}
+
+.scroll-navbar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.scroll-navbar li.active a {
+  background-color: white;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+.scroll-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #1e3a8a; /* blue-800 */
+  color: white;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scroll-navbar ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+.scroll-navbar li {
+  margin-right: 1rem;
+  list-style: none;
+}
+
+.scroll-navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.scroll-navbar a.active {
+  font-weight: bold;
+}
+
+.scroll-navbar a:hover {
+  text-decoration: underline;
+}
+
+.scroll-navbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.scroll-navbar a.book-button {
+  background-color: #f87171; /* red-500 */
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+}
+
+.scroll-navbar a.book-button:hover {
+  background-color: #ef4444; /* red-600 */
+}
+
+@media (max-width: 640px) {
+  .scroll-navbar a.book-button {
+    display: none;
+  }
+}
+
+
+
+
+

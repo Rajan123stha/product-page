@@ -1,0 +1,114 @@
+/* styles.css */
+
+@media (max-width: 768px) {
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .header-logo {
+      flex: 1;
+    }
+  
+    .header-icons {
+      display: flex;
+      gap: 10px;
+    }
+  }
+ 
+/*
+  @media (max-width: 767px) {
+    .floating-box {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-top: 1rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .floating-box {
+      position: fixed;
+      top: 8rem; 
+      right: 2rem;
+      width: 16rem;
+    }
+  }
+  */
+
+
+
+  .scroll-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .scroll-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .scroll-navbar li {
+    padding: 15px;
+  }
+  
+  .scroll-navbar li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .scroll-navbar li.active a {
+    background-color: white;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .book-now-button {
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .book-now-button:hover {
+    background-color: #ff787d;
+  }
+  
+  .scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 18px;
+  }
+  
+  .scroll-to-top-button:hover {
+    background-color: #555;
+  }
+  
+  
+  
+ 
+  
+  
